@@ -1,0 +1,1 @@
+!function(){"use strict";!function(){const n=document.querySelectorAll(".dropdown-menu > input");document.addEventListener("click",(function(c){const e=c.target;n.forEach((function(n){n.checked&&!e.closest(".dropdown-menu")&&(n.checked=!1)}))}))}()}();
