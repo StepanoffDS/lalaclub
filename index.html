@@ -5,6 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lalaclub</title>
+        <link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
         <link rel="stylesheet" href="./css/main.css" />
 
         <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -13,9 +17,10 @@
 			sizes="180x180"
 			href="./img/favicons/apple-touch-icon.png"
 		/>
+
     </head>
 
-    <body>
+    <body class='u-bg-blur'>
         <header class="header">
     <div class="container">
         <div class="header__row">
@@ -169,13 +174,21 @@
             </a>
         </li>
     </ul>
+    <ul class="sidebar-nav__extra">
+        <li class="sidebar-nav__extra-item">
+            <a href="#">Справка</a>
+        </li>
+        <li class="sidebar-nav__extra-item">
+            <a href="#">Политика Конфиденциальности</a>
+        </li>
+    </ul>
+
 </div></nav>
     </div>
 </aside>
 <nav class="sidebar sidebar--mobile">
     <div class="sidebar__inner">
-        <input class="sidebar__input" type="checkbox" id='sidebarMobileOpenBtn'>
-<ul class="sidebar__list">
+        <ul class="sidebar__list">
     <li class="sidebar__item sidebar__item--f">
         <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M14.375 9.36538C14.375 10.1041 14.2295 10.8355 13.9468 11.518C13.6641 12.2004 13.2498 12.8205 12.7275 13.3429C12.2051 13.8652 11.585 14.2795 10.9026 14.5622C10.2201 14.8449 9.48868 14.9904 8.74999 14.9904C8.01131 14.9904 7.27986 14.8449 6.5974 14.5622C5.91494 14.2795 5.29485 13.8652 4.77252 13.3429C4.25019 12.8205 3.83585 12.2004 3.55317 11.518C3.27049 10.8355 3.12499 10.1041 3.12499 9.36538C3.12499 7.87354 3.71763 6.4428 4.77252 5.38791C5.82741 4.33301 7.25815 3.74038 8.74999 3.74038C10.2418 3.74038 11.6726 4.33301 12.7275 5.38791C13.7824 6.4428 14.375 7.87354 14.375 9.36538ZM13.35 15.2904C11.843 16.4604 9.9467 17.012 8.04724 16.8331C6.14778 16.6541 4.38792 15.758 3.12593 14.3271C1.86394 12.8963 1.19468 11.0383 1.25441 9.13132C1.31414 7.22438 2.09837 5.41189 3.44744 4.06282C4.7965 2.71375 6.609 1.92953 8.51593 1.8698C10.4229 1.81007 12.2809 2.47932 13.7117 3.74132C15.1426 5.00331 16.0387 6.76317 16.2177 8.66263C16.3966 10.5621 15.845 12.4584 14.675 13.9654L18.1625 17.4529C18.2546 17.5387 18.3285 17.6422 18.3797 17.7572C18.431 17.8722 18.4585 17.9963 18.4607 18.1222C18.463 18.2481 18.4398 18.3731 18.3926 18.4899C18.3455 18.6066 18.2753 18.7127 18.1863 18.8017C18.0973 18.8907 17.9912 18.9609 17.8745 19.008C17.7578 19.0552 17.6327 19.0783 17.5068 19.0761C17.381 19.0739 17.2568 19.0463 17.1418 18.9951C17.0268 18.9439 16.9233 18.87 16.8375 18.7779L13.35 15.2904Z" fill="currentColor" />
@@ -210,37 +223,52 @@
             </defs>
         </svg>
     </li>
-    <li class="sidebar__item sidebar__item--s">
-        <svg width="21" height="21" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2.65024 7.85001V10.45C2.65024 12.595 2.65024 13.6675 3.31649 14.3338C3.98274 15 5.05525 15 7.20025 15H8.50025C10.6452 15 11.7177 15 12.384 14.3338C13.0502 13.6675 13.0502 12.595 13.0502 10.45V7.85001M7.85025 4.50706C7.85025 3.84215 7.58611 3.20447 7.11595 2.73431C6.64578 2.26414 6.00811 2.00001 5.3432 2.00001H5.11115C4.47024 2.00001 3.95024 2.51936 3.95024 3.16091C3.95024 3.71497 4.17035 4.24634 4.56213 4.63812C4.95391 5.02991 5.48528 5.25001 6.03935 5.25001H7.85025M7.85025 4.50706V5.25001M7.85025 4.50706C7.85025 3.84215 8.11438 3.20447 8.58454 2.73431C9.05471 2.26414 9.69239 2.00001 10.3573 2.00001H10.5893C11.2302 2.00001 11.7502 2.51936 11.7502 3.16091C11.7502 3.43525 11.6962 3.70691 11.5912 3.96037C11.4862 4.21383 11.3324 4.44413 11.1384 4.63812C10.9444 4.83212 10.7141 4.986 10.4606 5.09098C10.2072 5.19597 9.93549 5.25001 9.66115 5.25001H7.85025M7.85025 7.85001V15M2.00024 6.55001C2.00024 6.06381 2.00024 5.82071 2.13089 5.64001C2.22356 5.51585 2.34639 5.41741 2.48774 5.35401C2.71394 5.25001 3.01749 5.25001 3.62524 5.25001H12.0752C12.683 5.25001 12.9865 5.25001 13.2127 5.35401C13.3609 5.42291 13.4838 5.52171 13.5696 5.64001C13.7002 5.82071 13.7002 6.06381 13.7002 6.55001C13.7002 7.03621 13.7002 7.27866 13.5696 7.46001C13.4769 7.58416 13.3541 7.6826 13.2127 7.74601C12.9865 7.85001 12.683 7.85001 12.0752 7.85001H3.62524C3.01749 7.85001 2.71394 7.85001 2.48774 7.74601C2.34639 7.6826 2.22356 7.58416 2.13089 7.46001C2.00024 7.27866 2.00024 7.03621 2.00024 6.55001Z" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </li>
-    <li class="sidebar__item sidebar__item--s">
-        <svg width="21" height="21" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.99399 2.35369C5.26243 2.35369 3.04807 4.56805 3.04807 7.2996C3.04807 9.09803 4.00758 10.6729 5.44545 11.5393C5.72621 11.7085 5.81666 12.0732 5.64749 12.354C5.54561 12.5231 5.3728 12.6231 5.19012 12.639C4.05312 13.1386 3.09264 13.9315 2.41507 14.9108C2.22857 15.1804 1.85886 15.2477 1.5893 15.0612C1.31975 14.8747 1.25242 14.505 1.43893 14.2354C2.08966 13.2949 2.9558 12.5046 3.96863 11.9267C2.67797 10.8029 1.86105 9.14683 1.86105 7.2996C1.86105 3.91248 4.60686 1.16667 7.99399 1.16667C11.3811 1.16667 14.1269 3.91248 14.1269 7.2996C14.1269 9.14683 13.31 10.8029 12.0193 11.9267C13.0322 12.5046 13.8983 13.2949 14.549 14.2354C14.7355 14.505 14.6682 14.8747 14.3987 15.0612C14.1291 15.2477 13.7594 15.1804 13.5729 14.9108C12.8953 13.9315 11.9348 13.1386 10.7978 12.639C10.6152 12.6231 10.4424 12.5231 10.3405 12.354C10.1713 12.0732 10.2618 11.7085 10.5425 11.5393C11.9804 10.6729 12.9399 9.09803 12.9399 7.2996C12.9399 4.56805 10.7255 2.35369 7.99399 2.35369ZM5.22427 7.10177C5.55206 7.10177 5.81778 7.36749 5.81778 7.69528C5.81778 8.89716 6.7921 9.87148 7.99399 9.87148C9.19587 9.87148 10.1702 8.89716 10.1702 7.69528C10.1702 7.36749 10.4359 7.10177 10.7637 7.10177C11.0915 7.10177 11.3572 7.36749 11.3572 7.69528C11.3572 9.55273 9.85144 11.0585 7.99399 11.0585C6.13653 11.0585 4.63076 9.55273 4.63076 7.69528C4.63076 7.36749 4.89649 7.10177 5.22427 7.10177Z" fill="currentColor" />
-        </svg>
-    </li>
-    <li class="sidebar__item sidebar__item--s">
-        <svg width="21" height="21" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.0022 8.40987C13.0022 8.60415 12.925 8.79048 12.7877 8.92786C12.6503 9.06524 12.464 9.14242 12.2697 9.14242C12.0754 9.14242 11.8891 9.06524 11.7517 8.92786C11.6143 8.79048 11.5371 8.60415 11.5371 8.40987C11.5371 8.21558 11.6143 8.02925 11.7517 7.89187C11.8891 7.75449 12.0754 7.67731 12.2697 7.67731C12.464 7.67731 12.6503 7.75449 12.7877 7.89187C12.925 8.02925 13.0022 8.21558 13.0022 8.40987Z" fill="currentColor" />
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.36886 2H8.64858C9.99502 2 11.0616 2 11.896 2.11208C12.7546 2.22783 13.4498 2.47103 13.9985 3.01899C14.6753 3.6966 14.8914 4.60351 14.9698 5.78073C15.3925 5.96607 15.7119 6.35945 15.7463 6.85759C15.75 6.90228 15.75 6.9499 15.75 6.99385V9.82592C15.75 9.86987 15.75 9.91749 15.7471 9.96144C15.7119 10.4596 15.3925 10.8537 14.9698 11.0398C14.8914 12.2163 14.6753 13.1232 13.9985 13.8008C13.4498 14.3487 12.7546 14.5919 11.896 14.7077C11.0609 14.8198 9.99502 14.8198 8.64858 14.8198H6.36886C5.02242 14.8198 3.95581 14.8198 3.12143 14.7077C2.26287 14.5919 1.56767 14.3487 1.01899 13.8008C0.471035 13.2521 0.227826 12.5569 0.112081 11.6983C0 10.8632 0 9.79735 0 8.45091V8.36886C0 7.02242 0 5.95581 0.112081 5.12143C0.227826 4.26287 0.471035 3.56767 1.01899 3.01899C1.56767 2.47103 2.26287 2.22783 3.12143 2.11208C3.95655 2 5.02242 2 6.36886 2ZM13.8585 11.157H12.4388C10.8675 11.157 9.52252 9.96437 9.52252 8.40988C9.52252 6.8554 10.8675 5.66279 12.4381 5.66279H13.8578C13.7743 4.68043 13.586 4.16105 13.2205 3.79623C12.9106 3.48636 12.4857 3.30029 11.7488 3.2014C10.9964 3.1003 10.0038 3.09884 8.60682 3.09884H6.40915C5.01216 3.09884 4.02028 3.1003 3.26648 3.2014C2.53026 3.30029 2.10537 3.48636 1.7955 3.79623C1.48563 4.1061 1.29956 4.53099 1.20066 5.26794C1.09957 6.02101 1.0981 7.0129 1.0981 8.40988C1.0981 9.80687 1.09957 10.7995 1.20066 11.5526C1.29956 12.2888 1.48563 12.7137 1.7955 13.0235C2.10537 13.3334 2.53026 13.5195 3.26721 13.6184C4.02028 13.7195 5.01216 13.7209 6.40915 13.7209H8.60682C10.0038 13.7209 10.9964 13.7195 11.7495 13.6184C12.4857 13.5195 12.9106 13.3334 13.2205 13.0235C13.586 12.6587 13.775 12.1401 13.8585 11.157ZM2.93023 5.47965C2.93023 5.33394 2.98812 5.19419 3.09115 5.09115C3.19419 4.98812 3.33394 4.93023 3.47965 4.93023H6.40988C6.5556 4.93023 6.69534 4.98812 6.79838 5.09115C6.90142 5.19419 6.9593 5.33394 6.9593 5.47965C6.9593 5.62537 6.90142 5.76511 6.79838 5.86815C6.69534 5.97118 6.5556 6.02907 6.40988 6.02907H3.47965C3.33394 6.02907 3.19419 5.97118 3.09115 5.86815C2.98812 5.76511 2.93023 5.62537 2.93023 5.47965ZM14.4123 6.76163H12.4388C11.3957 6.76163 10.6214 7.53741 10.6214 8.40988C10.6214 9.28236 11.3957 10.0581 12.4381 10.0581H14.4292C14.5801 10.0486 14.6453 9.94679 14.6504 9.88526V6.93451C14.6453 6.87298 14.5801 6.77115 14.4292 6.76236L14.4123 6.76163Z" fill="currentColor" />
-        </svg>
-    </li>
-    <li class="sidebar__item sidebar__item--s">
-        <svg width="21" height="21" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.3334 5.16667H7.33337M9.33337 11.8333H3.33337" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M11.3334 13.8333C12.4379 13.8333 13.3334 12.9379 13.3334 11.8333C13.3334 10.7288 12.4379 9.83334 11.3334 9.83334C10.2288 9.83334 9.33337 10.7288 9.33337 11.8333C9.33337 12.9379 10.2288 13.8333 11.3334 13.8333Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4.66669 7.16667C5.77126 7.16667 6.66669 6.27124 6.66669 5.16667C6.66669 4.0621 5.77126 3.16667 4.66669 3.16667C3.56212 3.16667 2.66669 4.0621 2.66669 5.16667C2.66669 6.27124 3.56212 7.16667 4.66669 7.16667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-    </li>
     <li class="sidebar__item sidebar__item--extra">
-        <label for="sidebarMobileOpenBtn">
-            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 7.61539H4V5.61539H16V7.61539Z" fill="currentColor" />
-                <path d="M16 11.6154H4V9.61539H16V11.6154Z" fill="currentColor" />
-                <path d="M4 15.6154H16V13.6154H4V15.6154Z" fill="currentColor" />
-            </svg>
-        </label>
+        <button class='sidebar__nav-btn'>
+            <span class='sidebar__nav-icon'>
+                <svg class='sidebar__nav-icon--menu' width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 7.61539H4V5.61539H16V7.61539Z" fill="currentColor" />
+                    <path d="M16 11.6154H4V9.61539H16V11.6154Z" fill="currentColor" />
+                    <path d="M4 15.6154H16V13.6154H4V15.6154Z" fill="currentColor" />
+                </svg>
+                <svg class='sidebar__nav-icon--cross' width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75748 4.95853L4.34326 6.37274L8.5859 10.6154L4.34326 14.858L5.75747 16.2722L10.0001 12.0296L14.2428 16.2722L15.657 14.858L11.4143 10.6154L15.657 6.37274L14.2428 4.95853L10.0001 9.20117L5.75748 4.95853Z" fill="#1A1B1C" />
+                </svg>
+            </span>
+        </button>
+        <ul class='sidebar__sub-list sidebar__sub-list--js'>
+            <li class="sidebar__sub-item">
+                <a href="#">Мой профиль
+                    <img src="./img/icons/user.svg" alt="image"/>
+                </a>
+            </li>
+            <li class="sidebar__sub-item">
+                <a href="#">Мои подарки
+                    <img src="./img/icons/gift-2.svg" alt="image"/>
+                </a>
+            </li>
+            <li class="sidebar__sub-item">
+                <a href="#">Мои гости
+                    <img src="./img/icons/eye.svg" alt="image"/>
+                </a>
+            </li>
+            <li class="sidebar__sub-item">
+                <a href="#">Мой кошелек
+                    <img src="./img/icons/wallet.svg" alt="image"/>
+                </a>
+            </li>
+            <li class="sidebar__sub-item">
+                <a href="#">Настройки
+                    <img src="./img/icons/settings.svg" alt="image"/>
+                </a>
+            </li>
+            <li class="sidebar__sub-item">
+                <a href="#">Справка</a>
+            </li>
+            <li class="sidebar__sub-item">
+                <a href="#">Политика конфиденциальности</a>
+            </li>
+        </ul>
     </li>
 </ul>
     </div>
@@ -249,51 +277,84 @@
                     <div class="layout-main"><section class="personal">
     <div class="personal__inner">
         <section class="personal__hero personal__block personal__block--sm">
-            <div class="personal__hero-img">
-                <img src="./img/profile-avatarka.png" alt="profile-avatarka"/>
-                <div class="personal__hero-mob-actions">
-                    <button class="personal__hero-mob-action contacts mobile active">
-                        <img src="./img/icons/contacts-2.svg" alt="image"/>
-                    </button>
-                    <button class="personal__hero-mob-action like mobile active">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_b_0_204)">
-                                <rect class='personal__hero-like-bg' x="1" y="1" width="48" height="48" rx="24" fill="currentColor" fill-opacity="1" />
-                                <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" stroke="url(#paint0_linear_0_204)" stroke-opacity="0.3" />
-                                <path d="M25.62 33.81C25.28 33.93 24.72 33.93 24.38 33.81C21.48 32.82 15 28.69 15 21.69C15 18.6 17.49 16.1 20.56 16.1C22.38 16.1 23.99 16.98 25 18.34C26.01 16.98 27.63 16.1 29.44 16.1C32.51 16.1 35 18.6 35 21.69C35 28.69 28.52 32.82 25.62 33.81Z" fill="#currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                            <defs>
-                                <filter id="filter0_b_0_204" x="-10" y="-10" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
-                                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_204" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_204" result="shape" />
-                                </filter>
-                                <linearGradient id="paint0_linear_0_204" x1="-16.1429" y1="-14.7091" x2="74.8132" y2="6.08568" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="white" stop-opacity="0" />
-                                    <stop offset="1" stop-color="white" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </button>
-                    <button class="personal__hero-mob-action message">
-                        <img src="./img/icons/message.svg" alt="image"/>
-                    </button>
-                </div>
-                <button class="personal__hero-mob-bookmark  mobile active">
-                    <svg class='personal__hero-bookmark--yes' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="nonzero" clip-rule="nonzero" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
+    <div class="personal__hero-img">
+        <img src="./img/profile-avatarka.png" alt="profile-avatarka"/>
+        <div class="personal__hero-mob-actions">
+            <button class="personal__hero-mob-action contacts mobile active">
+                <img src="./img/icons/contacts-2.svg" alt="image"/>
+            </button>
+            <div class="personal__hero-mob-action like mobile">
+                <input type="checkbox" name='like' id='likeBtn2'>
+                <label for='likeBtn2'>
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_0_204)">
+                            <rect class='personal__hero-like-bg' x="1" y="1" width="48" height="48" rx="24" fill="currentColor" fill-opacity="1" />
+                            <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" stroke="url(#paint0_linear_0_204)" stroke-opacity="0.3" />
+                            <path d="M25.62 33.81C25.28 33.93 24.72 33.93 24.38 33.81C21.48 32.82 15 28.69 15 21.69C15 18.6 17.49 16.1 20.56 16.1C22.38 16.1 23.99 16.98 25 18.34C26.01 16.98 27.63 16.1 29.44 16.1C32.51 16.1 35 18.6 35 21.69C35 28.69 28.52 32.82 25.62 33.81Z" fill="#currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_0_204" x="-10" y="-10" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_204" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_204" result="shape" />
+                            </filter>
+                            <linearGradient id="paint0_linear_0_204" x1="-16.1429" y1="-14.7091" x2="74.8132" y2="6.08568" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0" />
+                                <stop offset="1" stop-color="white" />
+                            </linearGradient>
+                        </defs>
                     </svg>
-                    <svg class='personal__hero-bookmark--no' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
-                    </svg>
-                </button>
+                </label>
             </div>
-            <span class="personal__hero-status online">online</span>
-            <div class="personal__hero-extra">
+            <button class="personal__hero-mob-action message">
+                <img src="./img/icons/message.svg" alt="image"/>
+            </button>
+        </div>
+        <div class="personal__hero-mob-bookmark mobile">
+            <input type="checkbox" name="bookmark" id="bookmarkBtn2">
+            <label for="bookmarkBtn2">
+                <svg class='personal__hero-bookmark--yes' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="nonzero" clip-rule="nonzero" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
+                </svg>
+                <svg class='personal__hero-bookmark--no' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
+                </svg>
+            </label>
+        </div>
+    </div>
+    <span class="personal__hero-status online">online</span>
+    <div class="personal__hero-extra">
+        <div class="personal__hero-extra-inner dropdown-menu toggle">
+            <input type="checkbox" id='extraOpenBtn'>
+            <label for='extraOpenBtn' class="personal__hero-extra-btn active">
+                <img src="./img/icons/extra.svg" alt="image"/>
+            </label>
+            <ul class="personal__hero-extra-list dropdown-menu__list">
+                <li class="personal__hero-extra-item dropdown-menu__item">
+                    <a href="#">Пожаловаться</a>
+                </li>
+                <li class="personal__hero-extra-item dropdown-menu__item">
+                    <a href="#">Отправить в&#160;ЧС</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="personal__hero-info">
+        <div class="personal__hero-text">
+            <div class="personal__hero-text-row">
+                <h4 class="personal__hero-name">Антонина</h4>
+                <div class="personal__hero-likes">
+                    <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
+                    244
+                </div>
+                <span class="personal__hero-status mobile online">online</span>
+            </div>
+            <p class="personal__hero-desc">27, Кременчуг-Константиновское</p>
+            <div class="personal__hero-extra mobile">
                 <div class="personal__hero-extra-inner dropdown-menu toggle">
-                    <input type="checkbox" id='extraOpenBtn'>
-                    <label for='extraOpenBtn' class="personal__hero-extra-btn active">
+                    <input type="checkbox" id='extraOpenBtn2'>
+                    <label for='extraOpenBtn2' class="personal__hero-extra-btn active">
                         <img src="./img/icons/extra.svg" alt="image"/>
                     </label>
                     <ul class="personal__hero-extra-list dropdown-menu__list">
@@ -306,232 +367,206 @@
                     </ul>
                 </div>
             </div>
-            <div class="personal__hero-info">
-                <div class="personal__hero-text">
-                    <div class="personal__hero-text-row">
-                        <h4 class="personal__hero-name">Антонина</h4>
-                        <div class="personal__hero-likes">
-                            <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
-                            244
-                        </div>
-                        <span class="personal__hero-status mobile online">online</span>
-                    </div>
-                    <p class="personal__hero-desc">27, Кременчуг-Константиновское</p>
-                    <div class="personal__hero-extra mobile">
-                        <div class="personal__hero-extra-inner dropdown-menu toggle">
-                            <input type="checkbox" id='extraOpenBtn2'>
-                            <label for='extraOpenBtn2' class="personal__hero-extra-btn active">
-                                <img src="./img/icons/extra.svg" alt="image"/>
-                            </label>
-                            <ul class="personal__hero-extra-list dropdown-menu__list">
-                                <li class="personal__hero-extra-item dropdown-menu__item">
-                                    <a href="#">Пожаловаться</a>
-                                </li>
-                                <li class="personal__hero-extra-item dropdown-menu__item">
-                                    <a href="#">Отправить в&#160;ЧС</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="personal__hero-mess personal__hero-mess--mobile">
-                    <!-- <div class="personal__hero-mess-bg">
-						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 399 87" fill="none">
-							<path d="M0.645547 0C0.222853 1.66515 0 3.39561 0 5.17137V63.1333C0 76.3145 12.2789 87 27.4256 87H371.574C386.721 87 399 76.3145 399 63.1333V35.9106C399 20.4466 386.464 7.91057 371 7.91057H15.182C8.7922 7.91057 3.26848 4.6835 0.645547 0Z" fill="#FFF6DF"/>
-						</svg>
-					</div> -->
-                    <p class="personal__hero-mess-text">
-                        Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты
-                    </p>
-                </div>
-                <div class="personal__hero-tags">
-                    <div class="personal__hero-tag tag tag--pink">
-                        Взрослая (26-34)
-                    </div>
-                    <div class="personal__hero-tag tag tag--purple">
-                        Ищу парня
-                    </div>
-                    <div class="personal__hero-tag tag tag--light">
-                        Спортивная фигура
-                    </div>
-                </div>
-                <div class="personal__hero-mess">
-                    <!-- <div class="personal__hero-mess-bg">
-						<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 399 87" fill="none">
-							<path d="M0.645547 0C0.222853 1.66515 0 3.39561 0 5.17137V63.1333C0 76.3145 12.2789 87 27.4256 87H371.574C386.721 87 399 76.3145 399 63.1333V35.9106C399 20.4466 386.464 7.91057 371 7.91057H15.182C8.7922 7.91057 3.26848 4.6835 0.645547 0Z" fill="#FFF6DF"/>
-						</svg>
-					</div> -->
-                    <p class="personal__hero-mess-text">
-                        Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты
-                    </p>
-                </div>
+        </div>
+        <div class="personal__hero-mess personal__hero-mess--mobile">
+            <p class="personal__hero-mess-text">
+                Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты
+            </p>
+        </div>
+        <div class="personal__hero-tags">
+            <div class="personal__hero-tag tag tag--pink">
+                Взрослая (26-34)
             </div>
-            <div class="personal__hero-mess personal__hero-mess--tablet">
-                <!-- <div class="personal__hero-mess-bg">
-					<svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 399 87" fill="none">
-						<path d="M0.645547 0C0.222853 1.66515 0 3.39561 0 5.17137V63.1333C0 76.3145 12.2789 87 27.4256 87H371.574C386.721 87 399 76.3145 399 63.1333V35.9106C399 20.4466 386.464 7.91057 371 7.91057H15.182C8.7922 7.91057 3.26848 4.6835 0.645547 0Z" fill="#FFF6DF"/>
-					</svg>
-				</div> -->
-                <p class="personal__hero-mess-text">
-                    Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты
-                </p>
+            <div class="personal__hero-tag tag tag--purple">
+                Ищу парня
             </div>
-            <div class="personal__hero-bar">
-                <button class="personal__hero-btn">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.843 10.944L4.649 13.279C4.64545 13.3197 4.6542 13.3606 4.67413 13.3962C4.69406 13.4319 4.72425 13.4608 4.76078 13.4791C4.79731 13.4974 4.8385 13.5043 4.87902 13.499C4.91953 13.4936 4.9575 13.4762 4.988 13.449L7.198 11.485L7.787 11.498L8 11.5C9.695 11.5 11.087 11.06 12.02 10.323C12.91 9.621 13.5 8.563 13.5 7C13.5 5.437 12.91 4.38 12.02 3.677C11.087 2.94 9.695 2.5 8 2.5C6.305 2.5 4.913 2.94 3.98 3.677C3.09 4.38 2.5 5.437 2.5 7C2.5 8.648 3.156 9.742 4.148 10.448L4.843 10.944ZM5.984 14.569L7.754 12.997C7.834 12.9997 7.916 13.0007 8 13C11.866 13 15 11 15 7C15 3 11.866 1 8 1C4.134 1 1 3 1 7C1 9.117 1.878 10.674 3.277 11.67L3.154 13.154C3.12578 13.4933 3.19987 13.8334 3.36672 14.1302C3.53357 14.427 3.78552 14.667 4.09009 14.8193C4.39465 14.9716 4.73785 15.0292 5.07542 14.9845C5.413 14.9399 5.72946 14.7952 5.984 14.569Z" fill="currentColor" />
+            <div class="personal__hero-tag tag tag--light">
+                Спортивная фигура
+            </div>
+        </div>
+        <div class="personal__hero-mess">
+            <p class="personal__hero-mess-text">
+                Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты
+            </p>
+        </div>
+    </div>
+    <div class="personal__hero-mess personal__hero-mess--tablet">
+        <p class="personal__hero-mess-text">
+            Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты
+        </p>
+    </div>
+    <div class="personal__hero-bar">
+        <button class="personal__hero-btn" title='Написать сообщение'>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.843 10.944L4.649 13.279C4.64545 13.3197 4.6542 13.3606 4.67413 13.3962C4.69406 13.4319 4.72425 13.4608 4.76078 13.4791C4.79731 13.4974 4.8385 13.5043 4.87902 13.499C4.91953 13.4936 4.9575 13.4762 4.988 13.449L7.198 11.485L7.787 11.498L8 11.5C9.695 11.5 11.087 11.06 12.02 10.323C12.91 9.621 13.5 8.563 13.5 7C13.5 5.437 12.91 4.38 12.02 3.677C11.087 2.94 9.695 2.5 8 2.5C6.305 2.5 4.913 2.94 3.98 3.677C3.09 4.38 2.5 5.437 2.5 7C2.5 8.648 3.156 9.742 4.148 10.448L4.843 10.944ZM5.984 14.569L7.754 12.997C7.834 12.9997 7.916 13.0007 8 13C11.866 13 15 11 15 7C15 3 11.866 1 8 1C4.134 1 1 3 1 7C1 9.117 1.878 10.674 3.277 11.67L3.154 13.154C3.12578 13.4933 3.19987 13.8334 3.36672 14.1302C3.53357 14.427 3.78552 14.667 4.09009 14.8193C4.39465 14.9716 4.73785 15.0292 5.07542 14.9845C5.413 14.9399 5.72946 14.7952 5.984 14.569Z" fill="currentColor" />
+            </svg>
+            Сообщение
+        </button>
+        <div class="personal__hero-bar-info">
+            <div class="personal__hero-like" title='Поставить лайк'>
+                <input type="checkbox" name="like" id="likeBtn">
+                <label for="likeBtn">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_0_204)">
+                            <rect class='personal__hero-like-bg' x="1" y="1" width="48" height="48" rx="24" fill="currentColor" fill-opacity="1" />
+                            <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" stroke="url(#paint0_linear_0_204)" stroke-opacity="0.3" />
+                            <path d="M25.62 33.81C25.28 33.93 24.72 33.93 24.38 33.81C21.48 32.82 15 28.69 15 21.69C15 18.6 17.49 16.1 20.56 16.1C22.38 16.1 23.99 16.98 25 18.34C26.01 16.98 27.63 16.1 29.44 16.1C32.51 16.1 35 18.6 35 21.69C35 28.69 28.52 32.82 25.62 33.81Z" fill="#currentColor" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_0_204" x="-10" y="-10" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_204" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_204" result="shape" />
+                            </filter>
+                            <linearGradient id="paint0_linear_0_204" x1="-16.1429" y1="-14.7091" x2="74.8132" y2="6.08568" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="white" stop-opacity="0" />
+                                <stop offset="1" stop-color="white" />
+                            </linearGradient>
+                        </defs>
                     </svg>
-                    Сообщение
-                </button>
-                <div class="personal__hero-bar-info">
-                    <button class="personal__hero-like active">
-                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g filter="url(#filter0_b_0_204)">
-                                <rect class='personal__hero-like-bg' x="1" y="1" width="48" height="48" rx="24" fill="currentColor" fill-opacity="1" />
-                                <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" stroke="url(#paint0_linear_0_204)" stroke-opacity="0.3" />
-                                <path d="M25.62 33.81C25.28 33.93 24.72 33.93 24.38 33.81C21.48 32.82 15 28.69 15 21.69C15 18.6 17.49 16.1 20.56 16.1C22.38 16.1 23.99 16.98 25 18.34C26.01 16.98 27.63 16.1 29.44 16.1C32.51 16.1 35 18.6 35 21.69C35 28.69 28.52 32.82 25.62 33.81Z" fill="#currentColor" stroke-linecap="round" stroke-linejoin="round" />
-                            </g>
-                            <defs>
-                                <filter id="filter0_b_0_204" x="-10" y="-10" width="70" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                                    <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
-                                    <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_0_204" />
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_0_204" result="shape" />
-                                </filter>
-                                <linearGradient id="paint0_linear_0_204" x1="-16.1429" y1="-14.7091" x2="74.8132" y2="6.08568" gradientUnits="userSpaceOnUse">
-                                    <stop stop-color="white" stop-opacity="0" />
-                                    <stop offset="1" stop-color="white" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
-                    </button>
-                    <div class="personal__hero-menus">
-                        <div class="personal__hero-menu dropdown-menu hover">
-                            <div class="personal__hero-menu-name">
-                                <img src="./img/icons/info.svg" alt="icon"/>
-                                <h5 class="personal__hero-menu-title">Информация</h5>
-                                <img class='personal__hero-menu-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
-                            </div>
-                            <ul class="personal__hero-menu-list dropdown-menu__list">
-                                <li class="personal__hero-menu-item dropdown-menu__item active">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="personal__hero-menu dropdown-menu hover">
-                            <div class="personal__hero-menu-name">
-                                <img src="./img/icons/gift.svg" alt="icon"/>
-                                <h5 class="personal__hero-menu-title">Подарки</h5>
-                                <img class='personal__hero-menu-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
-                            </div>
-                            <ul class="personal__hero-menu-list dropdown-menu__list">
-                                <li class="personal__hero-menu-item dropdown-menu__item active">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="personal__hero-menu dropdown-menu hover ">
-                            <div class="personal__hero-menu-name">
-                                <img src="./img/icons/contacts.svg" alt="icon"/>
-                                <h5 class="personal__hero-menu-title">Контакты</h5>
-                                <img class='personal__hero-menu-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
-                            </div>
-                            <ul class="personal__hero-menu-list dropdown-menu__list">
-                                <li class="personal__hero-menu-item dropdown-menu__item active">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                                <li class="personal__hero-menu-item dropdown-menu__item">
-                                    <a href="#">item</a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="personal__hero-menu-mobile dropdown-menu">
-                            <input type="checkbox" id='mobileMenuOpenBtn'>
-                            <label for='mobileMenuOpenBtn' class="personal__hero-menu-mobile-btn active">
-                                <div>
-                                    <img src="./img/icons/info.svg" alt="image"/>
-                                <span>Подробнее</span>
-                                </div>
-                                <img class='personal__hero-menu-mobile-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
-                            </label>
-                            <ul class="personal__hero-menu-mobile-list dropdown-menu__list">
-                                <li class="personal__hero-menu-mobile-item dropdown-menu__item">
-                                    <a href="#">Item 1</a>
-                                </li>
-                                <li class="personal__hero-menu-mobile-item dropdown-menu__item">
-                                    <a href="#">Item 2</a>
-                                </li>
-                                <li class="personal__hero-menu-mobile-item dropdown-menu__item">
-                                    <a href="#">Item 3</a>
-                                </li>
-                                <li class="personal__hero-menu-mobile-item dropdown-menu__item">
-                                    <a href="#">Item 4</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <button class="personal__hero-bookmark active">
-                        <svg class='personal__hero-bookmark--yes' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="nonzero" clip-rule="nonzero" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
-                        </svg>
-                        <svg class='personal__hero-bookmark--no' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
-                        </svg>
-                    </button>
-                </div>
+                </label>
             </div>
 
-        </section>
+            <div class="personal__hero-tabs">
+    <div data-hero-tab='info' class="personal__hero-tab personal__hero-tab--js" title='Посмотреть информацию'>
+        <img src="./img/icons/info.svg" alt="icon"/>
+        <h5 class="personal__hero-tab-title">Информация</h5>
+        <img class='personal__hero-tab-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
+    </div>
+
+    <div data-hero-tab='gifts' class="personal__hero-tab personal__hero-tab--js" title='Посмотреть подарки'>
+        <img src="./img/icons/gift.svg" alt="icon"/>
+        <h5 class="personal__hero-tab-title">Подарки</h5>
+        <img class='personal__hero-tab-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
+    </div>
+    <div data-hero-tab='contacts' class="personal__hero-tab 11 personal__hero-tab--js" title='Посмотреть контакты'>
+        <img src="./img/icons/contacts.svg" alt="icon"/>
+        <h5 class="personal__hero-tab-title">Контакты</h5>
+        <img class='personal__hero-tab-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
+    </div>
+
+    <div class="personal__hero-menu-mobile dropdown-menu">
+        <input type="checkbox" id='mobileMenuOpenBtn'>
+        <label for='mobileMenuOpenBtn' class="personal__hero-menu-mobile-btn active">
+            <div>
+                <img src="./img/icons/info.svg" alt="image"/>
+            <span>Подробнее</span>
+            </div>
+            <img class='personal__hero-menu-mobile-arrow' src="./img/icons/arrow.svg" alt="arrow"/>
+        </label>
+
+        <ul class="personal__hero-menu-mobile-list dropdown-menu__list">
+            <li data-hero-tab='info' class="personal__hero-menu-mobile-item dropdown-menu__item personal__hero-tab--js">
+                <label for="mobileMenuOpenBtn">Информация</label>
+            </li>
+            <li data-hero-tab='gifts' class="personal__hero-menu-mobile-item dropdown-menu__item personal__hero-tab--js">
+                <label for="mobileMenuOpenBtn">Подарки</label>
+            </li>
+            <li data-hero-tab='contacts' class="personal__hero-menu-mobile-item dropdown-menu__item personal__hero-tab--js">
+                <label for="mobileMenuOpenBtn">Контакты</label>
+            </li>
+        </ul>
+    </div>
+
+    <div class="personal__hero-bookmark">
+        <input type="checkbox" name="bookmark" id="bookmarkBtn">
+        <label for="bookmarkBtn" title='Добавить в закладки'>
+            <svg class='personal__hero-bookmark--yes' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="nonzero" clip-rule="nonzero" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
+            </svg>
+            <svg class='personal__hero-bookmark--no' width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3843 24.8752L24.5854 25.9053L28.2628 29.0559C28.3208 29.1055 28.3918 29.1374 28.4674 29.1479C28.543 29.1584 28.62 29.1471 28.6893 29.1152C28.7587 29.0834 28.8175 29.0324 28.8588 28.9683C28.9001 28.9041 28.9222 28.8295 28.9225 28.7532V18.6921C28.9225 18.2025 28.728 17.733 28.3818 17.3868C28.0356 17.0406 27.566 16.8461 27.0764 16.8461H19.6921C19.2025 16.8461 18.733 17.0406 18.3868 17.3868C18.0406 17.733 17.8461 18.2025 17.8461 18.6921V28.7532C17.8461 28.8296 17.868 28.9044 17.9093 28.9687C17.9505 29.0331 18.0093 29.0842 18.0786 29.1162C18.148 29.1482 18.2251 29.1596 18.3008 29.1492C18.3765 29.1387 18.4476 29.1068 18.5057 29.0572L22.1831 25.9066L23.3843 24.8752ZM30.7685 18.6921C30.7685 17.7129 30.3795 16.7738 29.6871 16.0814C28.9947 15.389 28.0556 15 27.0764 15H19.6921C18.7129 15 17.7738 15.389 17.0814 16.0814C16.389 16.7738 16 17.7129 16 18.6921V28.7532C15.9999 29.1828 16.1229 29.6035 16.3547 29.9653C16.5864 30.3272 16.9171 30.6149 17.3074 30.7945C17.6977 30.974 18.1314 31.0378 18.5569 30.9784C18.9824 30.9189 19.382 30.7386 19.7081 30.459L23.3843 27.3071L27.0604 30.4577C27.3864 30.7373 27.7857 30.9175 28.211 30.9771C28.6363 31.0366 29.0698 30.973 29.46 30.7937C29.8503 30.6145 30.1809 30.3271 30.4128 29.9657C30.6448 29.6042 30.7682 29.1839 30.7685 28.7544V18.6921Z" fill="currentColor" />
+            </svg>
+        </label>
+    </div>
+</div>
+        </div>
+
+</section>
+
+<div class="personal__tabs" id='personalTabs'>
+    <section data-personal-tab='info' class="personal__block personal__tab personal__block-about">
+        <h4 class="personal__block-title">О&#160;себе</h6>
+        <p class="personal__block-desc"> Привет, я&#160;из&#160;Москвы, живу рядом с&#160;метро Авиамоторная</p>
+    </section>
+    <section data-personal-tab='gifts' class="personal__block personal__tab personal__block-gifts">
+        <h4 class="personal__block-title">Подарки Антонины</h6>
+        <div class='gift-swiper swiper'>
+            <ul class="personal__block-gifts-list swiper-wrapper">
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+                <li class="personal__block-gifts-item swiper-slide">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section data-personal-tab='contacts' class="personal__block personal__tab personal__block-contacts hidden">
+        <input type="checkbox" name="hiddenContacts" id="hiddenContactsBtn">
+        <div class='hidden'>
+            <h4 class="personal__block-title">Контакты Антонины</h6>
+            <ul class="personal__block-contacts-list">
+                <li class="personal__block-contacts-item">
+                    <img src="./img/icons/telegram.svg" alt="image"/>
+                    t.me/ghhhhklmkj
+                </li>
+                <li class="personal__block-contacts-item ">
+                    <img src="./img/icons/whatsapp.svg" alt="image"/>
+                    +7&#160;999&#160;888-77-66
+                </li>
+            </ul>
+            <div class="personal__block-contacts-hidden">
+                <picture>
+                    <source media='(min-width: 506px)' srcset='./img/hiddenInfo/hidden-contacts-big.png' />
+                    <img srcset='./img/hiddenInfo/hidden-contacts-small.png' alt='hidden contacts'>
+                </picture>
+                <label for="hiddenContactsBtn" class="personal__block-contacts-hidden-btn" >Запросить контакты</label>
+            </div>
+        </div>
+    </section>
+</div>
+
         <section class="personal__block">
-            <h6 class="personal__block-title">О&#160;себе</h6>
-            <p class="personal__block-desc"> Привет, я&#160;из&#160;Москвы, живу рядом с&#160;метро Авиамоторная</p>
-        </section>
-        <section class="personal__block">
-            <h6 class="personal__block-title">Интересы</h6>
+            <h4 class="personal__block-title">Интересы</h6>
             <div class="personal__block-tags">
                 <div class="personal__block-tag tag">Секс
                     <img src="./img/smiles/banana.png" alt="image"/>
                 </div>
-                <div class="personal__block-tag tag">карьера
+                <div class="personal__block-tag tag">Карьера
                     <img src="./img/smiles/career.png" alt="image"/>
                 </div>
                 <div class="personal__block-tag tag">Семья и&#160;дети
                     <img src="./img/smiles/family.png" alt="image"/>
                 </div>
-                <div class="personal__block-tag tag">тусовки
+                <div class="personal__block-tag tag">Тусовки
                     <img src="./img/smiles/party.png" alt="image"/>
                 </div>
-                <div class="personal__block-tag tag">путешествия
+                <div class="personal__block-tag tag">Путешествия
                     <img src="./img/smiles/travel.png" alt="image"/>
                 </div>
-                <div class="personal__block-tag tag">спорт
+                <div class="personal__block-tag tag">Спорт
                     <img src="./img/smiles/sport.png" alt="image"/>
                 </div>
                 <div class="personal__block-tag tag">Иностранные языки
@@ -540,7 +575,7 @@
             </div>
         </section>
         <section class="personal__block">
-            <h6 class="personal__block-title">Цели знакомства</h6>
+            <h4 class="personal__block-title">Цели знакомства</h6>
             <div class="personal__block-tags">
                 <div class="personal__block-tag tag">Отношения</div>
                 <div class="personal__block-tag tag">Регулярный секс</div>
@@ -548,31 +583,238 @@
                 <div class="personal__block-tag tag">Материальная поддержка</div>
             </div>
         </section>
-        <section class="personal__block personal-gallery">
-            <nav class="personal-gallery__nav">
-                <ul class="personal-gallery__nav-list">
-                    <li class="personal-gallery__nav-item active">
-                        <a href='#'>Фото</a>
+        <section class="personal__block">
+            <div class="personal-gallery">
+    <nav class="personal-gallery__nav">
+        <ul class="personal-gallery__nav-list">
+            <li data-personal-gallery-link='toImages' class="personal-gallery__nav-item active">
+                Фото
+            </li>
+            <li data-personal-gallery-link='toVideos' class="personal-gallery__nav-item">
+                Видео
+            </li>
+        </ul>
+    </nav>
+    <ul data-personal-gallery='images' class="personal-gallery__grid">
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/1.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/2.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/3.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/4.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item empty">
+            <img src="./img/gallery/empty-gallery-space.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item empty">
+            <img src="./img/gallery/empty-gallery-space.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item empty">
+            <img src="./img/gallery/empty-gallery-space.png" alt="image"/>
+        </li>
+        <li class="personal-gallery__grid-item all-photo">
+            <a href="#">
+                <img src="./img/gallery/all-photo-space.svg" alt="all photos"/>
+            </a>
+        </li>
+    </ul>
+    <ul data-personal-gallery='video' class="personal-gallery__grid">
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/2.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/1.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/4.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item">
+            <img src="./img/gallery/3.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item empty">
+            <img src="./img/gallery/empty-gallery-space.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item empty">
+            <img src="./img/gallery/empty-gallery-space.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item empty">
+            <img src="./img/gallery/empty-gallery-space.png" alt="video"/>
+        </li>
+        <li class="personal-gallery__grid-item all-video">
+            <a href="#">
+                <img src="./img/gallery/all-video-space.svg" alt="all videos"/>
+            </a>
+        </li>
+    </ul>
+</div>
+        </section>
+        <section class="personal__block personal__block--wall">
+            <div class="personal-wall">
+    <h4 class="personal-wall__title personal__block-title">Стена</h6>
+    <div class="personal-wall__report">
+        <textarea type="text" class='personal-wall__report-input' placeholder='Как вам Антонина?'></textarea>
+    </div>
+    <div class="personal-wall__filters">
+        <div class="personal-wall__filter dropdown-menu left">
+            <input type="checkbox" id="sortWallBtn">
+            <label for="sortWallBtn" class="personal-wall__filter-btn">
+                <span id='sortWallText'>Сначала новые</span>
+                <img src="./img/icons/arrow-2.svg" alt="image"/></label>
+                <ul class="personal-wall__filter-list dropdown-menu__list">
+                    <li class="personal-wall__filter-item dropdown-menu__item">
+                        <input type="checkbox" checked id='1ParamSortWall' name='ParamsSortWall' value='Сначала новые'>
+                        <label for='1ParamSortWall' >
+                            Сначала новые
+                        </label>
                     </li>
-                    <li class="personal-gallery__nav-item">
-                        <a href='#'>Видео</a>
+                    <li class="personal-wall__filter-item dropdown-menu__item">
+                        <input type="radio" id='2ParamSortWall' name='ParamsSortWall' value='Сначала старые'>
+                        <label for='2ParamSortWall'>
+                            Сначала старые
+                        </label>
+                    </li>
+                    <li class="personal-wall__filter-item dropdown-menu__item">
+                        <input type="radio" id='3ParamSortWall' name='ParamsSortWall' value='Сначала популярные'>
+                        <label for='3ParamSortWall'>
+                            Сначала популярные
+                        </label>
+                    </li>
+                    <li class="personal-wall__filter-item dropdown-menu__item">
+                        <input type="radio" id='4ParamSortWall' name='ParamsSortWall' value='Сначала от забаненных'>
+                        <label for='4ParamSortWall'>
+                            Сначала от&#160;забаненных
+                        </label>
                     </li>
                 </ul>
-            </nav>
-            <div class="personal-gallery__grid">
-                <div class="personal-gallery__grid-item">
-                    <img src="./img/gallery/1.png" alt="image"/>
+        </div>
+        <div class="personal-wall__filter dropdown-menu right">
+            <input type="checkbox" id="filterWallBtn">
+            <label for="filterWallBtn" class="personal-wall__filter-btn">
+                <span id='filterWallText'>Все реакции</span>
+                <img src="./img/icons/arrow-2.svg" alt="image"/>
+            </label>
+            <ul class="personal-wall__filter-list dropdown-menu__list">
+                <li class="personal-wall__filter-item dropdown-menu__item">
+                    <input type="radio" id='1ParamFilterWall' name='ParamsFilterWall' value='Положительные'>
+                    <label for='1ParamFilterWall' >
+                        Положительные
+                    </label>
+                </li>
+                <li class="personal-wall__filter-item dropdown-menu__item">
+                    <input type="radio" id='2ParamFilterWall' name='ParamsFilterWall' value='Отрицательные'>
+                    <label for='2ParamFilterWall'>
+                        Отрицательные
+                    </label>
+                </li>
+                <li class="personal-wall__filter-item dropdown-menu__item">
+                    <input type="radio" id='3ParamFilterWall' name='ParamsFilterWall' value='От популярных пользователей'>
+                    <label for='3ParamFilterWall'>
+                        От&#160;популярных пользователей
+                    </label>
+                </li>
+                <li class="personal-wall__filter-item dropdown-menu__item">
+                    <input type="radio" id='4ParamFilterWall' name='ParamsFilterWall' value='От забаненных пользователей'>
+                    <label for='4ParamFilterWall'>
+                        От&#160;забаненных пользователей
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="personal-wall__messages">
+        <a href='#' class="personal-wall-message">
+    <div class="personal-wall-message__avatarka">
+        <img src="./img/user.png" class='personal-wall-message__avatarka-img' alt="image">
+        <span class="personal-wall-message__avatarka-reaction">
+            <img src="./img/smiles/reaction-1.svg" alt="image">
+        </span>
+    </div>
+    <div class="personal-wall-message__text">
+        <h5 class="personal-wall-message__name">Ivan</h5>
+        <p class="personal-wall-message__text-message">It&#160;looks very refreshing Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, officia ut&#160;optio labore eos minima. Praesentium illo itaque consequuntur doloremque rerum nulla unde delectus tenetur possimus, in&#160;earum libero voluptatem repellat veritatis quo blanditiis deleniti ad&#160;velit debitis fuga voluptatum&#160;et. Mollitia unde eveniet in&#160;sed quam amet, distinctio provident dolores sunt, consectetur suscipit asperiores magni quis fugit doloremque tenetur incidunt perspiciatis! Ducimus libero officia debitis quia sapiente ullam minima quidem, minus enim repudiandae earum, delectus placeat eligendi beatae rem accusantium, quam tempore. Hic soluta ullam et&#160;qui? Corporis quam hic aliquam&#160;id. Facilis modi eum accusantium corporis ad&#160;at?</p>
+    </div>
+    <p class="personal-wall-message__time"><span>12</span> h</p>
+</a>
+        <a href='#' class="personal-wall-message">
+    <div class="personal-wall-message__avatarka">
+        <img src="./img/user.png" class='personal-wall-message__avatarka-img' alt="image">
+        <span class="personal-wall-message__avatarka-reaction">
+            <img src="./img/smiles/reaction-1.svg" alt="image">
+        </span>
+    </div>
+    <div class="personal-wall-message__text">
+        <h5 class="personal-wall-message__name">Ivan</h5>
+        <p class="personal-wall-message__text-message">It&#160;looks very refreshing Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, officia ut&#160;optio labore eos minima. Praesentium illo itaque consequuntur doloremque rerum nulla unde delectus tenetur possimus, in&#160;earum libero voluptatem repellat veritatis quo blanditiis deleniti ad&#160;velit debitis fuga voluptatum&#160;et. Mollitia unde eveniet in&#160;sed quam amet, distinctio provident dolores sunt, consectetur suscipit asperiores magni quis fugit doloremque tenetur incidunt perspiciatis! Ducimus libero officia debitis quia sapiente ullam minima quidem, minus enim repudiandae earum, delectus placeat eligendi beatae rem accusantium, quam tempore. Hic soluta ullam et&#160;qui? Corporis quam hic aliquam&#160;id. Facilis modi eum accusantium corporis ad&#160;at?</p>
+    </div>
+    <p class="personal-wall-message__time"><span>12</span> h</p>
+</a>
+        <a href='#' class="personal-wall-message">
+    <div class="personal-wall-message__avatarka">
+        <img src="./img/user.png" class='personal-wall-message__avatarka-img' alt="image">
+        <span class="personal-wall-message__avatarka-reaction">
+            <img src="./img/smiles/reaction-1.svg" alt="image">
+        </span>
+    </div>
+    <div class="personal-wall-message__text">
+        <h5 class="personal-wall-message__name">Ivan</h5>
+        <p class="personal-wall-message__text-message">It&#160;looks very refreshing Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, officia ut&#160;optio labore eos minima. Praesentium illo itaque consequuntur doloremque rerum nulla unde delectus tenetur possimus, in&#160;earum libero voluptatem repellat veritatis quo blanditiis deleniti ad&#160;velit debitis fuga voluptatum&#160;et. Mollitia unde eveniet in&#160;sed quam amet, distinctio provident dolores sunt, consectetur suscipit asperiores magni quis fugit doloremque tenetur incidunt perspiciatis! Ducimus libero officia debitis quia sapiente ullam minima quidem, minus enim repudiandae earum, delectus placeat eligendi beatae rem accusantium, quam tempore. Hic soluta ullam et&#160;qui? Corporis quam hic aliquam&#160;id. Facilis modi eum accusantium corporis ad&#160;at?</p>
+    </div>
+    <p class="personal-wall-message__time"><span>12</span> h</p>
+</a>
+    </div>
+</div>
+            <div class="top-accounts">
+    <h3 class='top-accounts__title'>Топ-профили</h3>
+    <ul class="top-accounts__list">
+        <li class="top-accounts__item">
+            <a href="#" class="top-accounts__link" title='Перейти в профиль'>
+                <div class="top-accounts__avatar">
+                    <img src="./img/user-2.png" alt="image"/>
                 </div>
-                <div class="personal-gallery__grid-item">
-                    <img src="./img/gallery/2.png" alt="image"/>
+                <div class="top-accounts__info">
+                    <div class="top-accounts__hearts"><span>244</span></div>
+                    <div class="top-accounts__info-text">
+                        <div class="top-accounts__name">Нелли</div>
+                        <div class="top-accounts__status">31, Выборг</div>
+                    </div>
                 </div>
-                <div class="personal-gallery__grid-item">
-                    <img src="./img/gallery/3.png" alt="image"/>
+            </a>
+        </li>
+        <li class="top-accounts__item">
+            <a href="#" class="top-accounts__link" title='Перейти в профиль'>
+                <div class="top-accounts__avatar">
+                    <img src="./img/user-2.png" alt="image"/>
                 </div>
-                <div class="personal-gallery__grid-item">
-                    <img src="./img/gallery/4.png" alt="image"/>
+                <div class="top-accounts__info">
+                    <div class="top-accounts__hearts"><span>244</span></div>
+                    <div class="top-accounts__info-text">
+                        <div class="top-accounts__name">Нелли</div>
+                        <div class="top-accounts__status">31, Выборг</div>
+                    </div>
                 </div>
-            </div>
+            </a>
+        </li>
+        <li class="top-accounts__item">
+            <a href="#" class="top-accounts__link" title='Перейти в профиль'>
+                <div class="top-accounts__avatar">
+                    <img src="./img/user-2.png" alt="image"/>
+                </div>
+                <div class="top-accounts__info">
+                    <div class="top-accounts__hearts"><span>244</span></div>
+                    <div class="top-accounts__info-text">
+                        <div class="top-accounts__name">Нелли</div>
+                        <div class="top-accounts__status">31, Выборг</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
         </section>
     </div>
 </section>
@@ -580,6 +822,7 @@
                 </div>
             </div>
         </main>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="./js/index.bundle.js"></script>
     </body>
 </html>
