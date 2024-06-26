@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Lalaclub&#160;&#8212; Профиль</title>
-        <link
+        <!-- <link
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-		/>
+		/> -->
         <link rel="stylesheet" href="./css/main.css" />
 
         <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
@@ -310,13 +310,16 @@
     </div>
     <div class="profile__header-info">
         <header class="profile__header-row profile__header-row--header">
-            <div class="head-name">
+            <div class="profile__header-row-top">
+                <div class="head-name">
     <h4 class="head-name__title">Archy</h4>
     <div class="head-name__likes">
         <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
         174
     </div>
 </div>
+                <p>online</p>
+            </div>
             <p class="head-desc__desc">27, Кременчуг-Константиновское</p>
         </header>
         <main class="profile__header-row profile__header-row--main">
@@ -331,137 +334,222 @@
                 Редактировать профиль
             </button>
         </footer>
+        <button class="profile__header-edit-mob">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.6926 3.35317L15.7183 3.37885C16.0532 3.71377 16.3421 4.00267 16.5422 4.26483C16.7573 4.54625 16.9199 4.85977 16.9199 5.24498C16.9199 5.63019 16.7562 5.94371 16.5422 6.22512C16.3421 6.48728 16.0532 6.77619 15.7183 7.11111L15.6926 7.13679L7.99484 14.8346L7.95953 14.8699C7.78618 15.0432 7.63317 15.1973 7.44164 15.3054C7.2501 15.4145 7.03931 15.467 6.80069 15.5269L6.75254 15.5376L3.93516 16.2417L3.91268 16.2481C3.74008 16.2969 3.56412 16.333 3.38623 16.3561C3.22038 16.3733 2.94217 16.3701 2.71746 16.1453C2.49383 15.9206 2.48955 15.6414 2.5056 15.4755C2.5289 15.308 2.56286 15.1422 2.60725 14.979C2.60974 14.9694 2.61223 14.9598 2.61474 14.9501L3.32524 12.1103L3.33701 12.0632C3.39693 11.8235 3.44829 11.6138 3.55744 11.4212C3.66551 11.2296 3.81959 11.0766 3.99294 10.9022C4.00474 10.8908 4.01651 10.8794 4.02825 10.868L11.726 3.17019L11.7517 3.14451C12.0866 2.80959 12.3755 2.52069 12.6377 2.32059C12.9191 2.10552 13.2326 1.94287 13.6178 1.94287C14.003 1.94287 14.3166 2.10659 14.598 2.32059C14.8601 2.52069 15.149 2.80959 15.484 3.14451L15.5096 3.17019L15.6926 3.35317ZM15.6926 3.35317L15.3149 3.73196" stroke="#6649F4" stroke-width="1.5" />
+                <path d="M10.9429 3.64006L14.153 1.5L17.363 4.71008L15.223 7.92017L10.9429 3.64006Z" fill="#6649F4" />
+            </svg>
+        </button>
     </div>
 </div>
     </header>
     <main class="profile__main">
         <section class="profile__section profile__section--about">
-            <h5 class="profile__section-title">Обо мне</h5>
-            <div class="profile__section-content">
-                <div class="profile__section-textarea">
-                    <textarea readonly class="profile__section-textarea-text">Расскажите о&#160;себе</textarea>
-                    <button class='profile__section-textarea-edit'>
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.5541 11.4827L20.5746 11.5033C20.8426 11.7712 21.0737 12.0023 21.2338 12.2121C21.4058 12.4372 21.536 12.688 21.536 12.9962C21.536 13.3043 21.405 13.5552 21.2338 13.7803C21.0737 13.99 20.8426 14.2211 20.5746 14.4891L20.5541 14.5096L14.3959 20.6678L14.3676 20.6961C14.2289 20.8348 14.1065 20.958 13.9533 21.0445C13.8001 21.1318 13.6314 21.1738 13.4406 21.2217L13.402 21.2303L11.1481 21.7935L11.1301 21.7987C10.9921 21.8377 10.8513 21.8666 10.709 21.8851C10.5763 21.8988 10.3537 21.8962 10.174 21.7165C9.99506 21.5367 9.99164 21.3133 10.0045 21.1806C10.0231 21.0466 10.0503 20.9139 10.0858 20.7834C10.0878 20.7757 10.0898 20.768 10.0918 20.7603L10.6602 18.4884L10.6696 18.4507C10.7175 18.259 10.7586 18.0912 10.8459 17.9371C10.9324 17.7839 11.0557 17.6615 11.1943 17.522C11.2038 17.5129 11.2132 17.5037 11.2226 17.4946L17.3808 11.3363L17.4014 11.3158C17.6693 11.0479 17.9004 10.8167 18.1102 10.6567C18.3353 10.4846 18.5861 10.3545 18.8943 10.3545C19.2024 10.3545 19.4533 10.4855 19.6784 10.6567C19.8881 10.8167 20.1192 11.0479 20.3872 11.3158L20.4077 11.3363L20.5541 11.4827ZM20.5541 11.4827L20.2519 11.7858" stroke="#B0B5CD" stroke-width="1.5" />
-                            <path d="M16.7544 11.712L19.3225 10L21.8905 12.5681L20.1785 15.1361L16.7544 11.712Z" fill="#B0B5CD" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </section>
+    <h5 class="profile-section__title">Обо мне</h5>
+    <div class="profile-section__content">
+        <div class="profile-section__textarea">
+            <p class="profile-section__textarea-text">Расскажите о&#160;себе</p>
+            <button class='profile-section__textarea-edit'>
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.5541 11.4827L20.5746 11.5033C20.8426 11.7712 21.0737 12.0023 21.2338 12.2121C21.4058 12.4372 21.536 12.688 21.536 12.9962C21.536 13.3043 21.405 13.5552 21.2338 13.7803C21.0737 13.99 20.8426 14.2211 20.5746 14.4891L20.5541 14.5096L14.3959 20.6678L14.3676 20.6961C14.2289 20.8348 14.1065 20.958 13.9533 21.0445C13.8001 21.1318 13.6314 21.1738 13.4406 21.2217L13.402 21.2303L11.1481 21.7935L11.1301 21.7987C10.9921 21.8377 10.8513 21.8666 10.709 21.8851C10.5763 21.8988 10.3537 21.8962 10.174 21.7165C9.99506 21.5367 9.99164 21.3133 10.0045 21.1806C10.0231 21.0466 10.0503 20.9139 10.0858 20.7834C10.0878 20.7757 10.0898 20.768 10.0918 20.7603L10.6602 18.4884L10.6696 18.4507C10.7175 18.259 10.7586 18.0912 10.8459 17.9371C10.9324 17.7839 11.0557 17.6615 11.1943 17.522C11.2038 17.5129 11.2132 17.5037 11.2226 17.4946L17.3808 11.3363L17.4014 11.3158C17.6693 11.0479 17.9004 10.8167 18.1102 10.6567C18.3353 10.4846 18.5861 10.3545 18.8943 10.3545C19.2024 10.3545 19.4533 10.4855 19.6784 10.6567C19.8881 10.8167 20.1192 11.0479 20.3872 11.3158L20.4077 11.3363L20.5541 11.4827ZM20.5541 11.4827L20.2519 11.7858" stroke="#B0B5CD" stroke-width="1.5" />
+                    <path d="M16.7544 11.712L19.3225 10L21.8905 12.5681L20.1785 15.1361L16.7544 11.712Z" fill="#B0B5CD" />
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
         <section class="profile__section profile__section--external">
-            <h5 class="profile__section-title">Внешние данные</h5>
-            <div class="profile__section-content">
-                <div data-double-range='@@data' class="filter-popup__item filter-popup__item--doublerange">
-                    <div class="filter-popup__item-label">
-                        <p>Возраст</p>
+    <h5 class="profile-section__title">Внешние данные</h5>
+    <div class="profile-section__content">
+        <div class="profile-section__item profile-section__item--selector filter-selector">
+            <div class="profile-section__item-label">
+                <p>Телосложение</p>
+            </div>
+            <div class="profile-section__item-input">
+                <div class="filter-select">
+    <select name="bodyType" class="filter-select-js filter-select" data-placeholder="Выберите телосложение">
 
-                        <div class="range-price">
-                            <input type="number" name="min" value="18" min='18' max='70'>
-                            <span>-</span>
-                            <input type="number" name="max" value="35" min='18' max='70'>
-                        </div>
-                    </div>
-                    <div class="range-slider">
-                        <span class="range-selected"></span>
-                    </div>
-                    <div class="range-input">
-                        <input type="range" class="min" min="18" max="70" value="18" step="1">
-                        <input type="range" class="max" min="18" max="70" value="35" step="1">
-                    </div>
-                </div>
-                <div class="filter-popup__item filter-popup__item--selector filter-selector">
-                    <div class="filter-popup__item-label">
-                        <p>Цель знакомства</p>
-                    </div>
-                    <div class="filter-popup__item-input">
-                        <div class="filter-select">
-    <select name="targetOfDating" class="filter-select-js filter-select">
+            <option value="Худое">Худое</option>
 
-            <option value="@@options[i]">Любая</option>
+            <option value="Среднее">Среднее</option>
 
-            <option value="@@options[i]">Новый опыт</option>
+            <option value="Cпортивное">Спортивное</option>
 
-            <option value="@@options[i]">Серьезные отношения</option>
-
-            <option value="@@options[i]">Дружеские отношения</option>
+            <option value="Полное">Полное</option>
 
     </select>
 </div>
-                    </div>
-                </div>
-                <div class="filter-popup__item filter-popup__item--selector filter-selector">
-                    <div class="filter-popup__item-label">
-                        <p>Упорядочить</p>
-                    </div>
-                    <div class="filter-popup__item-input">
-                        <div class="filter-select">
-    <select name="sorting" class="filter-select-js filter-select">
+            </div>
+        </div>
+        <div class="profile-section__item profile-section__item--input">
+            <div class="profile-section__item-label">
+                <p>Рост</p>
+            </div>
+            <div class="profile-section__item-input">
+                <input type="text" placeholder='Введите ваш рост' class='input-text'>
+                <span>см</span>
+            </div>
+        </div>
+        <div class="profile-section__item profile-section__item--input">
+            <div class="profile-section__item-label">
+                <p>Вес</p>
+            </div>
+            <div class="profile-section__item-input">
+                <input type="text" placeholder='Введите ваш вес' class='input-text'>
+                <span>кг</span>
+            </div>
+        </div>
+        <div class="profile-section__item profile-section__item--selector filter-selector">
+            <div class="profile-section__item-label">
+                <p>Цвет глаз</p>
+            </div>
+            <div class="profile-section__item-input">
+                <div class="filter-select">
+    <select name="eyeColor" class="filter-select-js filter-select" data-placeholder="Выберите цвет глаз">
 
-            <option value="@@options[i]">Сначала онлайн</option>
+            <option value="Карие">Карие</option>
 
-            <option value="@@options[i]">По&#160;возрастанию</option>
+            <option value="Зеленые">Зеленые</option>
 
-            <option value="@@options[i]">По&#160;убыванию</option>
+            <option value="Голубые">Голубые</option>
 
     </select>
 </div>
-                    </div>
-                </div>
-                <div class="filter-popup__item filter-popup__item--selector filter-selector">
-                    <div class="filter-popup__item-label">
-                        <p>Местоположение</p>
-                    </div>
-                    <div class="filter-popup__item-input">
-                        <div class="filter-select">
-    <select name="location" class="filter-select-js filter-select">
+            </div>
+        </div>
+        <div class="profile-section__item profile-section__item--selector filter-selector">
+            <div class="profile-section__item-label">
+                <p>Цвет волос</p>
+            </div>
+            <div class="profile-section__item-input">
+                <div class="filter-select">
+    <select name="hairColor" class="filter-select-js filter-select" data-placeholder="Выберите цвет волос">
 
-            <option value="@@options[i]">Тула, Россия</option>
+            <option value="Брюнет">Брюнет</option>
 
-            <option value="@@options[i]">Москва, Россия</option>
+            <option value="Рыжий">Рыжий</option>
 
-            <option value="@@options[i]">Санкт-Петербург, Россия</option>
+            <option value="Блондин">Блондин</option>
+
+            <option value="Шатен">Шатен</option>
+
+            <option value="Русый">Русый</option>
+
+            <option value="Седой">Седой</option>
 
     </select>
 </div>
-                    </div>
-                </div>
-                <div class="filter-popup__item filter-popup__item--range">
-                    <div class="filter-popup__item-label">
-                        <p>Расстояние</p>
+            </div>
+        </div>
+        <div class="profile-section__item profile-section__item--range single-range-css single-range-js">
+            <div class="profile-section__item-label single-range-css__label">
+                <p>Размер члена</p>
 
-                        <div class="input-number">
-                            <input type="number" id="rangenumberDistance@@id" min="0" max="100" value="20">
-                            <span>км</span>
-                        </div>
-                    </div>
-                    <div class="filter-popup__item-input">
-                        <input class='input-range' type="range" value="20" min="0" max="100" id="rangeDistance@@id"/>
-                    </div>
-                </div>
-                <div class="filter-popup__item filter-popup__item--radios">
-                    <label for="withPhoto@@id" class="filter-popup__item-radio">
-                        <h5>С&#160;фото</h5>
-                        <input type="checkbox" id='withPhoto@@id'>
-                        <span></span>
-                    </label>
-                    <label for="onlyVerified@@id" class="filter-popup__item-radio">
-                        <h5>Только проверенные</h5>
-                        <input type="checkbox" id='onlyVerified@@id'>
-                        <span></span>
-                    </label>
+                <div class="input-number">
+                    <input type="number" id="size" min="0" max="30" value="15">
+                    <span>см</span>
                 </div>
             </div>
-        </section>
+            <div class="profile-section__item-input single-range-css__input">
+                <input class='input-range' type="range" id="size" min="0" max="30" value="15"/>
+            </div>
+        </div>
+    </div>
+</section>
         <section class="profile__section profile__section--interests">
-            <h5 class="profile__section-title">Интересы</h5>
-        </section>
+    <h5 class="profile-section__title">Интересы</h5>
+    <div class="profile-section__content">
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Секс🍌</div>
+</label>
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Карьера👩&#8205;💻</div>
+</label>
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Семья и&#160;дети👶</div>
+</label>
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Тусовки🍸</div>
+</label>
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Путешествия🛫</div>
+</label>
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Иностранные языки</div>
+</label>
+        <label class="checkbox-tag" name='interests1'>
+    <input type="checkbox" id='interests1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Спорт🎾</div>
+</label>
+    </div>
+</section>
         <section class="profile__section profile__section--goals">
-            <h5 class="profile__section-title">Цели знакомства</h5>
-        </section>
+    <h5 class="profile-section__title">Цели знакомства</h5>
+    <div class="profile-section__content">
+        <label class="checkbox-tag" name='goals1'>
+    <input type="checkbox" id='goals1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Отношения</div>
+</label>
+        <label class="checkbox-tag" name='goals1'>
+    <input type="checkbox" id='goals1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Регулярный секс</div>
+</label>
+        <label class="checkbox-tag" name='goals1'>
+    <input type="checkbox" id='goals1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Ons</div>
+</label>
+        <label class="checkbox-tag" name='goals1'>
+    <input type="checkbox" id='goals1'/>
+    <div class="checkbox__checkmark"></div>
+    <div class="checkbox__body">Материальная поддержка</div>
+</label>
+    </div>
+</section>
         <section class="profile__section profile__section--contacts">
-            <h5 class="profile__section-title">Контакты</h5>
-        </section>
+    <div class="profile-section__row">
+        <h5 class="profile-section__title">Контакты</h5>
+        <div class="profile-section__btn-access">
+            <label class="checkbox-tag" name='giveAccess'>
+                <input type="checkbox" id='giveAccess'/>
+                <div class="checkbox__body">Показывать по&#160;запросу</div>
+                <div class="checkbox__checkmark"></div>
+            </label>
+        </div>
+    </div>
+    <div class="profile-section__row">
+        <div class="profile-section__item">
+            <img src="./img/icons/telegram.svg" alt="image"/>
+            <span>t.me/ghhhhklmkj</span>
+        </div>
+        <div class="profile-section__item">
+            <img src="./img/icons/whatsapp.svg" alt="image"/>
+            <span>+7&#160;999&#160;888-77-66</span>
+        </div>
+        <button class="profile-section__add-btn">
+            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.84717 2.5H7.84717V7.5H2.84717V9.5H7.84717V14.5H9.84717V9.5H14.8472V7.5H9.84717V2.5Z" fill="#B0B5CD"/>
+                </svg>
+            Добавить контакт
+        </button>
+    </div>
+</section>
+
         <!-- <section class="profile__section profile__section--gallery">
 			<h5 class="profile__section-title">Обо мне</h5>
 			<h5 class="profile__section-title">Обо мне</h5>
