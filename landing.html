@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lalaclub&#160;&#8212; Поиск</title>
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+        <link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./img/favicons/apple-touch-icon.png"
+		/>
+
+    </head>
+
+    <body class='u-bg-blur'>
+        <header class='header-register'>
+    <div class="container">
+        <div class="header-register__row">
+            <div class="header__logo">
+                <a href="landing.html">
+                    lalaclub
+                </a>
+            </div>
+            <a href='#' class="header-register__signin">
+                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99453 1.85369C4.26298 1.85369 2.04862 4.06805 2.04862 6.7996C2.04862 8.59803 3.00813 10.1729 4.446 11.0393C4.72676 11.2085 4.81721 11.5732 4.64804 11.854C4.54616 12.0231 4.37335 12.1231 4.19067 12.139C3.05367 12.6386 2.09319 13.4315 1.41562 14.4108C1.22911 14.6804 0.859405 14.7477 0.589851 14.5612C0.320296 14.3747 0.252971 14.005 0.439476 13.7354C1.09021 12.7949 1.95635 12.0046 2.96918 11.4267C1.67852 10.3029 0.861602 8.64683 0.861602 6.7996C0.861602 3.41248 3.60741 0.666672 6.99453 0.666672C10.3817 0.666672 13.1275 3.41248 13.1275 6.7996C13.1275 8.64683 12.3105 10.3029 11.0199 11.4267C12.0327 12.0046 12.8989 12.7949 13.5496 13.7354C13.7361 14.005 13.6688 14.3747 13.3992 14.5612C13.1297 14.7477 12.76 14.6804 12.5734 14.4108C11.8959 13.4315 10.9354 12.6386 9.7984 12.139C9.61572 12.1231 9.44291 12.0231 9.34103 11.854C9.17186 11.5732 9.26231 11.2085 9.54307 11.0393C10.9809 10.1729 11.9404 8.59803 11.9404 6.7996C11.9404 4.06805 9.72609 1.85369 6.99453 1.85369ZM4.22482 6.60177C4.55261 6.60177 4.81833 6.86749 4.81833 7.19528C4.81833 8.39716 5.79265 9.37148 6.99453 9.37148C8.19642 9.37148 9.17074 8.39716 9.17074 7.19528C9.17074 6.86749 9.43646 6.60177 9.76425 6.60177C10.092 6.60177 10.3578 6.86749 10.3578 7.19528C10.3578 9.05273 8.85199 10.5585 6.99453 10.5585C5.13708 10.5585 3.63131 9.05273 3.63131 7.19528C3.63131 6.86749 3.89704 6.60177 4.22482 6.60177Z" fill="currentColor" />
+                </svg>
+                Войти
+            </a>
+        </div>
+    </div>
+</header>
+        <main class='main-landing'>
+            <div class="container">
+                <div class="layout layout--landing">
+                    <aside class="layout-sidebar layout-sidebar--landing"><nav class="sidebar-land">
+    <button class="sidebar-land__mob-btn">Показать фильтры</button>
+    <form class='sidebar-land__form sidebar-land__form--hidden'>
+        <div class="sidebar-land__inner">
+            <section class="sidebar-land__geo">
+    <button type="button" class="sidebar-land__geo-top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.48 7.51904C21.694 4.96904 19.032 2.30604 16.481 3.52004L4.82204 9.07204C2.43204 10.21 2.58004 13.661 5.05904 14.59L7.79804 15.617C7.93165 15.6672 8.05298 15.7453 8.15388 15.8462C8.25478 15.9471 8.33292 16.0684 8.38304 16.202L9.41004 18.942C10.34 21.42 13.79 21.568 14.928 19.178L20.48 7.51904Z" fill="#888A98" />
+        </svg>
+        <span>Калуга</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.6875 10.0001L3 5.00012H12.375L7.6875 10.0001Z" fill="#1A1B1C" />
+        </svg>
+    </button>
+    <div class="sidebar-land__geo-search none">
+        <input id="cityInput" type="text" class='sidebar-land__geo-input input-text' value='Калуга'>
+        <ul id="jsonData" class="sidebar-land__geo-list" style='display: none;'>
+            <li></li>
+        </ul>
+    </div>
+</section>
+            <section class="sidebar-land__gender">
+    <h3 class="sidebar-land__title">Я&#160;ищу</h3>
+    <div class="sidebar-land__gender-inputs">
+        <label for='gender-male' class="sidebar-land__gender-input ">
+            <input class='visually-hidden' type="radio" name="gender" id="male" value='male' >
+            <span>Мужчину</span>
+        </label>
+        <label for='gender-female' class="sidebar-land__gender-input checked">
+            <input class='visually-hidden' type="radio" name="gender" id="female" value='female' checked>
+            <span>Женщину</span>
+        </label>
+    </div>
+</section>
+
+            <section class="sidebar-land__goal filter-selector">
+    <h3 class="sidebar-land__title">Цель знакомства</h3>
+    <div class="filter-select">
+    <select id="goal@@id" name="goal" class="filter-select-js filter-select" data-placeholder="">
+
+            <option value="Любая">Любая</option>
+
+            <option value="Секс на одну ночь">Секс на&#160;одну ночь</option>
+
+            <option value="Регулярный секс">Регулярный секс</option>
+
+            <option value="Приятное времяпровождения">Приятное времяпровождения</option>
+
+            <option value="Дружба с привилегиями">Дружба с&#160;привилегиями</option>
+
+            <option value="Постоянные отношения">Постоянные отношения</option>
+
+            <option value="Общение">Общение</option>
+
+    </select>
+</div>
+</section>
+
+            <section class="sidebar-land__age">
+    <h3 class="sidebar-land__title">Возраст</h3>
+    <div class='sidebar-land__age-counter'>
+        <span>20</span>
+        лет
+    </div>
+    <div class="sidebar-land__age-inputs w-15">
+        <label for="age20" class="sidebar-land__age-input checked">
+            <div class="input-circle"></div>
+            <input type="checkbox" name="ages" id="age20" value="20" checked>
+        </label>
+        <label for="age40" class="sidebar-land__age-input">
+            <div class="input-circle"></div>
+            <input type="checkbox" name="ages" id="age40" value="40">
+        </label>
+        <label for='age60' class="sidebar-land__age-input">
+            <div class="input-circle"></div>
+            <input type="checkbox" name="ages" id="age60" value="60">
+        </label>
+        <label for='age60plus' class="sidebar-land__age-input">
+            <input type="checkbox" name="ages" id="age60plus" value="60+">
+        </label>
+    </div>
+</section>
+
+            <section class="sidebar-land__online">
+    <label for="onlyOnline" class='sidebar-land__online-input'>
+        <h3 class="sidebar-land__online-title">Только онлайн</h3>
+        <input type='checkbox' id='onlyOnline' value='online'>
+        <span></span>
+    </label>
+</section>
+
+            <button type="button" class="sidebar-land__btn" id='sidebarLandBtn'>
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4999 5.9999C11.4999 6.59085 11.3835 7.17601 11.1574 7.72197C10.9312 8.26794 10.5997 8.76401 10.1819 9.18188C9.76401 9.59974 9.26794 9.93121 8.72197 10.1574C8.17601 10.3835 7.59085 10.4999 6.9999 10.4999C6.40895 10.4999 5.82379 10.3835 5.27782 10.1574C4.73186 9.93121 4.23578 9.59974 3.81792 9.18188C3.40005 8.76401 3.06859 8.26794 2.84244 7.72197C2.61629 7.17601 2.4999 6.59085 2.4999 5.9999C2.4999 4.80642 2.974 3.66183 3.81792 2.81792C4.66183 1.974 5.80642 1.4999 6.9999 1.4999C8.19337 1.4999 9.33796 1.974 10.1819 2.81792C11.0258 3.66183 11.4999 4.80642 11.4999 5.9999ZM10.6799 10.7399C9.47427 11.6759 7.95726 12.1172 6.4377 11.974C4.91813 11.8309 3.51024 11.114 2.50065 9.96929C1.49105 8.82461 0.955648 7.3382 1.00343 5.81265C1.05122 4.2871 1.6786 2.8371 2.75785 1.75785C3.8371 0.678596 5.2871 0.0512164 6.81265 0.00343225C8.3382 -0.0443519 9.82461 0.491052 10.9693 1.50065C12.114 2.51024 12.8309 3.91813 12.974 5.4377C13.1172 6.95726 12.6759 8.47427 11.7399 9.6799L14.5299 12.4699C14.6036 12.5386 14.6627 12.6214 14.7037 12.7134C14.7447 12.8054 14.7667 12.9047 14.7685 13.0054C14.7703 13.1061 14.7517 13.2061 14.714 13.2995C14.6763 13.3929 14.6202 13.4777 14.5489 13.5489C14.4777 13.6202 14.3929 13.6763 14.2995 13.714C14.2061 13.7517 14.1061 13.7703 14.0054 13.7685C13.9047 13.7667 13.8054 13.7447 13.7134 13.7037C13.6214 13.6627 13.5386 13.6036 13.4699 13.5299L10.6799 10.7399Z" fill="#C4BCFF" />
+    </svg>
+    Искать
+</button>
+        </div>
+    </form>
+</nav></aside>
+                    <div class="layout-main layout-main--landing"><section class="landing">
+    <ul class="landing__list">
+        <li class="landing__item">
+    <div class="landing-item">
+        <div class="landing-item__img">
+            <img src="./img/profile-avatarka.png" alt="image"/>
+        </div>
+        <div class="landing-item__content">
+            <div class="landing-item__row landing-item__row--title">
+                <h2 class='landing-item__title-name'>Ева</h2>
+                <div class='landing-item__title-rating'>
+                    <div class="rating-widget">
+    <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
+    222
+</div>
+                </div>
+                <span class="landing-item__title-status landing-item__title-status--online">
+                    online
+                </span>
+            </div>
+            <div class="landing-item__row landing-item__row--title">
+                <p class='landing-item__subtitle'>27 лет, Кременчуг-Константиновское</p>
+            </div>
+            <div class="landing-item__row landing-item__tags">
+                <div class="personal__hero-tag tag tag--pink">Взрослая (26-34)</div>
+                <div class="personal__hero-tag tag tag--blue">Ищу парня</div>
+            </div>
+            <div class="landing-item__row landing-item__row--desc">
+                <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+            </div>
+            <div class="landing-item__row landing-item__row--actions">
+                <a href='register.html' class="landing-item__action">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_2029_1610)">
+                            <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+                </a>
+            </div>
+        </div>
+        <div class="landing-item__row landing-item__row--actions landing-item__actions-mob">
+            <a href='register.html' class="landing-item__action">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_2029_1610)">
+                        <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+            </a>
+        </div>
+
+        <div class="landing-item__desc-mob">
+            <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+        </div>
+    </div>
+</li>
+        <li class="landing__item">
+    <div class="landing-item">
+        <div class="landing-item__img">
+            <img src="./img/profile-avatarka.png" alt="image"/>
+        </div>
+        <div class="landing-item__content">
+            <div class="landing-item__row landing-item__row--title">
+                <h2 class='landing-item__title-name'>Ева</h2>
+                <div class='landing-item__title-rating'>
+                    <div class="rating-widget">
+    <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
+    222
+</div>
+                </div>
+                <span class="landing-item__title-status landing-item__title-status--online">
+                    online
+                </span>
+            </div>
+            <div class="landing-item__row landing-item__row--title">
+                <p class='landing-item__subtitle'>27 лет, Кременчуг-Константиновское</p>
+            </div>
+            <div class="landing-item__row landing-item__tags">
+                <div class="personal__hero-tag tag tag--pink">Взрослая (26-34)</div>
+                <div class="personal__hero-tag tag tag--blue">Ищу парня</div>
+            </div>
+            <div class="landing-item__row landing-item__row--desc">
+                <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+            </div>
+            <div class="landing-item__row landing-item__row--actions">
+                <a href='register.html' class="landing-item__action">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_2029_1610)">
+                            <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+                </a>
+            </div>
+        </div>
+        <div class="landing-item__row landing-item__row--actions landing-item__actions-mob">
+            <a href='register.html' class="landing-item__action">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_2029_1610)">
+                        <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+            </a>
+        </div>
+
+        <div class="landing-item__desc-mob">
+            <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+        </div>
+    </div>
+</li>
+        <li class="landing__item">
+    <div class="landing-item">
+        <div class="landing-item__img">
+            <img src="./img/profile-avatarka.png" alt="image"/>
+        </div>
+        <div class="landing-item__content">
+            <div class="landing-item__row landing-item__row--title">
+                <h2 class='landing-item__title-name'>Ева</h2>
+                <div class='landing-item__title-rating'>
+                    <div class="rating-widget">
+    <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
+    222
+</div>
+                </div>
+                <span class="landing-item__title-status landing-item__title-status--online">
+                    online
+                </span>
+            </div>
+            <div class="landing-item__row landing-item__row--title">
+                <p class='landing-item__subtitle'>27 лет, Кременчуг-Константиновское</p>
+            </div>
+            <div class="landing-item__row landing-item__tags">
+                <div class="personal__hero-tag tag tag--pink">Взрослая (26-34)</div>
+                <div class="personal__hero-tag tag tag--blue">Ищу парня</div>
+            </div>
+            <div class="landing-item__row landing-item__row--desc">
+                <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+            </div>
+            <div class="landing-item__row landing-item__row--actions">
+                <a href='register.html' class="landing-item__action">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_2029_1610)">
+                            <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+                </a>
+            </div>
+        </div>
+        <div class="landing-item__row landing-item__row--actions landing-item__actions-mob">
+            <a href='register.html' class="landing-item__action">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_2029_1610)">
+                        <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+            </a>
+        </div>
+
+        <div class="landing-item__desc-mob">
+            <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+        </div>
+    </div>
+</li>
+        <li class="landing__item">
+    <div class="landing-item">
+        <div class="landing-item__img">
+            <img src="./img/profile-avatarka.png" alt="image"/>
+        </div>
+        <div class="landing-item__content">
+            <div class="landing-item__row landing-item__row--title">
+                <h2 class='landing-item__title-name'>Ева</h2>
+                <div class='landing-item__title-rating'>
+                    <div class="rating-widget">
+    <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
+    222
+</div>
+                </div>
+                <span class="landing-item__title-status landing-item__title-status--online">
+                    online
+                </span>
+            </div>
+            <div class="landing-item__row landing-item__row--title">
+                <p class='landing-item__subtitle'>27 лет, Кременчуг-Константиновское</p>
+            </div>
+            <div class="landing-item__row landing-item__tags">
+                <div class="personal__hero-tag tag tag--pink">Взрослая (26-34)</div>
+                <div class="personal__hero-tag tag tag--blue">Ищу парня</div>
+            </div>
+            <div class="landing-item__row landing-item__row--desc">
+                <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+            </div>
+            <div class="landing-item__row landing-item__row--actions">
+                <a href='register.html' class="landing-item__action">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_2029_1610)">
+                            <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+                </a>
+            </div>
+        </div>
+        <div class="landing-item__row landing-item__row--actions landing-item__actions-mob">
+            <a href='register.html' class="landing-item__action">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_2029_1610)">
+                        <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+            </a>
+        </div>
+
+        <div class="landing-item__desc-mob">
+            <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+        </div>
+    </div>
+</li>
+        <li class="landing__item">
+    <div class="landing-item">
+        <div class="landing-item__img">
+            <img src="./img/profile-avatarka.png" alt="image"/>
+        </div>
+        <div class="landing-item__content">
+            <div class="landing-item__row landing-item__row--title">
+                <h2 class='landing-item__title-name'>Ева</h2>
+                <div class='landing-item__title-rating'>
+                    <div class="rating-widget">
+    <img src="./img/icons/two-hearts.svg" alt="two-hearts"/>
+    222
+</div>
+                </div>
+                <span class="landing-item__title-status landing-item__title-status--online">
+                    online
+                </span>
+            </div>
+            <div class="landing-item__row landing-item__row--title">
+                <p class='landing-item__subtitle'>27 лет, Кременчуг-Константиновское</p>
+            </div>
+            <div class="landing-item__row landing-item__tags">
+                <div class="personal__hero-tag tag tag--pink">Взрослая (26-34)</div>
+                <div class="personal__hero-tag tag tag--blue">Ищу парня</div>
+            </div>
+            <div class="landing-item__row landing-item__row--desc">
+                <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+            </div>
+            <div class="landing-item__row landing-item__row--actions">
+                <a href='register.html' class="landing-item__action">
+                    <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_b_2029_1610)">
+                            <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                                <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                                <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                            </filter>
+                        </defs>
+                    </svg>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+                </a>
+                <a href='register.html' class="landing-item__action">
+                    <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+                </a>
+            </div>
+        </div>
+        <div class="landing-item__row landing-item__row--actions landing-item__actions-mob">
+            <a href='register.html' class="landing-item__action">
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g filter="url(#filter0_b_2029_1610)">
+                        <path d="M22.62 30.81C22.28 30.93 21.72 30.93 21.38 30.81C18.48 29.82 12 25.69 12 18.69C12 15.6 14.49 13.1 17.56 13.1C19.38 13.1 20.99 13.98 22 15.34C23.01 13.98 24.63 13.1 26.44 13.1C29.51 13.1 32 15.6 32 18.69C32 25.69 25.52 29.82 22.62 30.81Z" stroke="#FF4B4B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <filter id="filter0_b_2029_1610" x="-10" y="-10" width="64" height="64" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                            <feGaussianBlur in="BackgroundImageFix" stdDeviation="5" />
+                            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2029_1610" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2029_1610" result="shape" />
+                        </filter>
+                    </defs>
+                </svg>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_comment.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_telegram.png" alt="image"/>
+            </a>
+            <a href='register.html' class="landing-item__action">
+                <img src="./img/icons/gravity-ui_phone.png" alt="image"/>
+            </a>
+        </div>
+
+        <div class="landing-item__desc-mob">
+            <p>Джентльмены, пишите и&#160;присылайте свои фото, при взаимной симпатии отправлю свои контакты</p>
+        </div>
+    </div>
+</li>
+    </ul>
+</section></div>
+                </div>
+            </div>
+        </main>
+        <script src="./js/landing.bundle.js"></script>
+    </body>
+</html>

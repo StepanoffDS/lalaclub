@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lalaclub&#160;&#8212; Регистрация</title>
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg" />
+        <link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="./img/favicons/apple-touch-icon.png"
+		/>
+
+    </head>
+
+    <body class='u-bg-blur register-page-bg'>
+        <header class='header-register'>
+    <div class="container">
+        <div class="header-register__row">
+            <div class="header__logo">
+                <a href="landing.html">
+                    lalaclub
+                </a>
+            </div>
+            <a href='#' class="header-register__signin">
+                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.99453 1.85369C4.26298 1.85369 2.04862 4.06805 2.04862 6.7996C2.04862 8.59803 3.00813 10.1729 4.446 11.0393C4.72676 11.2085 4.81721 11.5732 4.64804 11.854C4.54616 12.0231 4.37335 12.1231 4.19067 12.139C3.05367 12.6386 2.09319 13.4315 1.41562 14.4108C1.22911 14.6804 0.859405 14.7477 0.589851 14.5612C0.320296 14.3747 0.252971 14.005 0.439476 13.7354C1.09021 12.7949 1.95635 12.0046 2.96918 11.4267C1.67852 10.3029 0.861602 8.64683 0.861602 6.7996C0.861602 3.41248 3.60741 0.666672 6.99453 0.666672C10.3817 0.666672 13.1275 3.41248 13.1275 6.7996C13.1275 8.64683 12.3105 10.3029 11.0199 11.4267C12.0327 12.0046 12.8989 12.7949 13.5496 13.7354C13.7361 14.005 13.6688 14.3747 13.3992 14.5612C13.1297 14.7477 12.76 14.6804 12.5734 14.4108C11.8959 13.4315 10.9354 12.6386 9.7984 12.139C9.61572 12.1231 9.44291 12.0231 9.34103 11.854C9.17186 11.5732 9.26231 11.2085 9.54307 11.0393C10.9809 10.1729 11.9404 8.59803 11.9404 6.7996C11.9404 4.06805 9.72609 1.85369 6.99453 1.85369ZM4.22482 6.60177C4.55261 6.60177 4.81833 6.86749 4.81833 7.19528C4.81833 8.39716 5.79265 9.37148 6.99453 9.37148C8.19642 9.37148 9.17074 8.39716 9.17074 7.19528C9.17074 6.86749 9.43646 6.60177 9.76425 6.60177C10.092 6.60177 10.3578 6.86749 10.3578 7.19528C10.3578 9.05273 8.85199 10.5585 6.99453 10.5585C5.13708 10.5585 3.63131 9.05273 3.63131 7.19528C3.63131 6.86749 3.89704 6.60177 4.22482 6.60177Z" fill="currentColor" />
+                </svg>
+                Войти
+            </a>
+        </div>
+    </div>
+</header>
+        <main class='register__main'>
+            <form class="register-form" id="registerForm">
+    <div class="register-form__swiper swiper">
+        <div class="register-form__wrapper swiper-wrapper">
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Укажите вашу почту</h3>
+    <div class="register-form__input">
+        <input name="email" id="email" type="text" class=" input-text" placeholder='olivia@untitledui.com'>
+        <p class='register-form__error' id='emailError' style='display: none;'></p>
+    </div>
+    <button type='button' id='emailBtn' class="register-form__btn">Далее</button>
+    <p class="register-form__disclaimer">Продолжая, вы&#160;принимаете Условия, Политику конфиденциальности и&#160;подтверждаете что вам 18 и&#160;более лет</p>
+</div>
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Кто вы?</h3>
+    <div class="register-form__inputs">
+        <label for='gender-male' class="register-form__input register-form__input--radio checked">
+            <input class='visually-hidden' type="radio" name="gender" id="gender-male" value='male' checked>
+            Мужчина
+        </label>
+        <label for='gender-female' class="register-form__input register-form__input--radio">
+            <input class='visually-hidden' type="radio" name="gender" id="gender-female" value='female'>
+            Женщина
+        </label>
+    </div>
+    <button type='button' id='whoIsBtn' class="register-form__btn">Далее</button>
+</div>
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Ваша дата рождения</h3>
+    <input type="date" class="register-form__date" id="birthday" placeholder="Date of Birth">
+    <p class='register-form__error' id='birthError' style='display: none;'></p>
+    <button type='button' id='birthBtn' class="register-form__btn">Далее</button>
+</div>
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Как вас зовут?</h3>
+    <input name="name" id="name" type="text" class="register-form__input input-text" placeholder='Введите имя'>
+    <p class='register-form__error' id='nameError' style='display: none;'></p>
+    <button type='button' id='nameBtn' class="register-form__btn">Далее</button>
+</div>
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Что вы&#160;ищите?</h3>
+    <div class="register-form__inputs register-form__inputs--checkbox">
+        <label class="register-form__input register-form__input--checkbox checkbox-tag">
+            <input class='visually-hidden' type="checkbox" name="whatFind" id="whatFind1" value='1'>
+            <div class="checkbox__checkmark"></div>
+            Секс на&#160;одну ночь
+        </label>
+        <label class="register-form__input register-form__input--checkbox checkbox-tag">
+            <input class='visually-hidden' type="checkbox" name="whatFind" id="whatFind2" value='2'>
+            <div class="checkbox__checkmark"></div>
+            Регулярный секс
+        </label>
+        <label class="register-form__input register-form__input--checkbox checkbox-tag">
+            <input class='visually-hidden' type="checkbox" name="whatFind" id="whatFind3" value='3'>
+            <div class="checkbox__checkmark"></div>
+            Приятное времяпровождение
+        </label>
+        <label class="register-form__input register-form__input--checkbox checkbox-tag">
+            <input class='visually-hidden' type="checkbox" name="whatFind" id="whatFind4" value='4'>
+            <div class="checkbox__checkmark"></div>
+            Дружба с&#160;привилегиями
+        </label>
+        <label class="register-form__input register-form__input--checkbox checkbox-tag">
+            <input class='visually-hidden' type="checkbox" name="whatFind" id="whatFind5" value='5'>
+            <div class="checkbox__checkmark"></div>
+            Постоянные отношения
+        </label>
+        <label class="register-form__input register-form__input--checkbox checkbox-tag">
+            <input class='visually-hidden' type="checkbox" name="whatFind" id="whatFind6" value='6'>
+            <div class="checkbox__checkmark"></div>
+            Общение
+        </label>
+    </div>
+    <button type='button' id='findBtn' class="register-form__btn">Далее</button>
+</div>
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Добавьте фото</h3>
+    <ul class="register-form__photos">
+        <li class="register-form__photo">
+            <label for="readUrlImage1"></label>
+            <input type='file' id="readUrlImage1">
+            <img id="imageUpload1" src="#" alt="Uploaded Image" accept="image/png, image/jpeg" style="display:none;">
+        </li>
+        <li class="register-form__photo">
+            <label for="readUrlImage2"></label>
+            <input type='file' id="readUrlImage2">
+            <img id="imageUpload2" src="#" alt="Uploaded Image" accept="image/png, image/jpeg" style="display:none;">
+        </li>
+        <li class="register-form__photo">
+            <label for="readUrlImage3"></label>
+            <input type='file' id="readUrlImage3">
+            <img id="imageUpload3" src="#" alt="Uploaded Image" accept="image/png, image/jpeg" style="display:none;">
+        </li>
+        <li class="register-form__photo">
+            <label for="readUrlImage4"></label>
+            <input type='file' id="readUrlImage4">
+            <img id="imageUpload4" src="#" alt="Uploaded Image" accept="image/png, image/jpeg" style="display:none;">
+        </li>
+    </ul>
+    <button type='submit' id='submitBtn' class="register-form__btn">Далее</button>
+</div>
+            <div class="register-form__slide swiper-slide">
+    <h3 class="register-form__slide-title">Регистрация прошла успешно</h3>
+</div>
+
+        </div>
+        <div class="register-form__pagination swiper-pagination"></div>
+
+    </div>
+</form>
+        </main>
+        <script src="./js/register.bundle.js"></script>
+    </body>
+</html>
